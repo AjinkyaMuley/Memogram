@@ -17,6 +17,10 @@ app.use(cors());
 app.use('/posts', postRoutes);       //this will make sure that all the routes in post routes will start from /posts
 app.use('/users', userRoutes);
 
+app.get('/',(req,res)=>{
+    res.send('APP IS RUNNING')
+})
+
 const PORT = process.env.PORT || 5000;
 // const CONNECTION_URL = 'mongodb+srv://avm121104:TjRz61J0IXujSjJK@tourguide.hnvlqvm.mongodb.net/?retryWrites=true&w=majority';
 
